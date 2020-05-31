@@ -5,7 +5,7 @@
   "scripts": {
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "deploy": "caprover deploy",
+    "deploy": "caprover deploy -a puppet -b master --default",
     "start": "tsc && pm2-runtime start ecosystem.config.js"
   },
   "author": "suphero",
