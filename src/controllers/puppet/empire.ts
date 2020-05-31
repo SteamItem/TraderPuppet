@@ -31,6 +31,9 @@ async function login(steamLogin: ISteamLogin) {
     const cookies = await mainPage.cookies();
 
     return cookies;
+  } catch (e) {
+    console.error(e);
+    throw e;
   } finally {
     await browser.close();
   }
