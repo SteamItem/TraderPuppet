@@ -9,6 +9,9 @@
       "request": "launch",
       "name": "Server",
       "program": "${workspaceFolder}/src/server.ts",
+      "env": {
+        "PORT": "3001"
+      },
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ]
