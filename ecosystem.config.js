@@ -4,7 +4,8 @@ module.exports = {
     script: "./dist/server.js",
     time: true,
     env: {
-      NODE_ENV: "production"
+      NODE_ENV: "production",
+      SAVE_SCREENSHOT: "true"
     }
   }]
 }

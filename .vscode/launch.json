@@ -10,7 +10,8 @@
       "name": "Server",
       "program": "${workspaceFolder}/src/server.ts",
       "env": {
-        "PORT": "3001"
+        "PORT": "3001",
+        "SAVE_SCREENSHOT": "true"
       },
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
