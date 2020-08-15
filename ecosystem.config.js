@@ -5,7 +5,8 @@ module.exports = {
     time: true,
     env: {
       NODE_ENV: "production",
-      SAVE_SCREENSHOT: "true"
+      SAVE_SCREENSHOT: "true",
+      HEADLESS: "true"
     }
   }]
 }
