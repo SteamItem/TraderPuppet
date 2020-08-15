@@ -12,7 +12,7 @@ async function login(page: puppeteer.Page, steamLogin: ISteamLogin) {
   await helpers.screenshot(page, 'steamInitial.jpg');
   await page.click('#imageLogin');
 
-  await helpers.sleep(5000);
+  await helpers.sleep(7000);
   // await page.waitForSelector('.loginTwoFactorCodeModal', { visible: true })
   await page.type('#twofactorcode_entry', steamLogin.twoFactorCode);
   await helpers.screenshot(page, 'steamTwoFactor.jpg');
