@@ -12,9 +12,6 @@ jobs:
       - run:
           name: Install caprover
           command: sudo npm i caprover -g
-      # - node/install-packages:
-      #     cache-path: node_modules
-      #     override-ci-command: npm i
       - run:
           name: Deploy
           command: sudo caprover deploy -a puppet -b master -u https://captain.app.trader-bot.pw -p ${CAPTAIN_PASSWORD}

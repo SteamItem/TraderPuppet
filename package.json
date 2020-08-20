@@ -5,7 +5,6 @@
   "scripts": {
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "deploy": "caprover deploy -a puppet -b master -u https://captain.app.trader-bot.pw -p ${CAPTAIN_PASSWORD}",
     "start": "tsc && pm2-runtime start ecosystem.config.js"
   },
   "author": "suphero",
