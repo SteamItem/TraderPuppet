@@ -17,7 +17,7 @@ jobs:
       #     override-ci-command: npm i
       - run:
           name: Deploy
-          command: sudo npm run deploy
+          command: sudo caprover deploy -a puppet -b master -u https://captain.app.trader-bot.pw -p ${CAPTAIN_PASSWORD}
 
 workflows:
   version: 2
