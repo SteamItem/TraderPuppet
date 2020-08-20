@@ -11,7 +11,7 @@ jobs:
       - node/install-npm
       - run:
           name: Install caprover
-          command: npm i caprover
+          command: sudo npm i caprover -g
       # - node/install-packages:
       #     cache-path: node_modules
       #     override-ci-command: npm i
