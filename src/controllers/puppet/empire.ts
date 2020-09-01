@@ -22,8 +22,6 @@ async function login(steamLogin: ISteamLogin) {
 
     // TODO: handle
     await helpers.sleep(5000);
-
-    await helpers.screenshot(mainPage, 'empireLogin.jpg');
     const cookies = await mainPage.cookies();
 
     return cookies;

@@ -20,7 +20,6 @@ async function login(steamLogin: ISteamLogin) {
     while (!steamLoginPage.isClosed) { await helpers.sleep(50); }
     await mainPage.waitForSelector('.uppercase.relative.active')
 
-    await helpers.screenshot(mainPage, 'rollbitLogin.jpg');
     const cookies = await mainPage.cookies();
     return cookies;
   } catch (e) {
