@@ -6,7 +6,7 @@ module.exports = {
     env: {
       NODE_ENV: "production",
       SAVE_SCREENSHOT: "true",
-      HEADLESS: "true"
+      HEADLESS: "false"
     }
   }]
 }
