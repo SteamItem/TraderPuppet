@@ -6,6 +6,9 @@ import { Constants } from '../../helpers/constant';
 async function login(steamLogin: ISteamLogin) {
   const browser = await helpers.launchBrowser();
   try {
+    const steamPage = await browser.newPage();
+    await steam.login(steamPage, steamLogin);
+
     const mainPage = await browser.newPage();
     await mainPage.setUserAgent(Constants.UserAgent);
     await mainPage.goto('https://csgoempire.gg');
@@ -16,14 +19,13 @@ async function login(steamLogin: ISteamLogin) {
     await helpers.sleep(2000);
 
     var postPages = await browser.pages();
-    var steamLoginPage = postPages[postPages.length - 1];
+    var steamUserSelectPage = postPages[postPages.length - 1];
 
-    await steam.login(steamLoginPage, steamLogin);
+    await steam.selectUser(steamUserSelectPage);
 
     // TODO: handle
     await helpers.sleep(5000);
 
-    await helpers.screenshot(mainPage, 'empireLogin.jpg');
     const cookies = await mainPage.cookies();
 
     return cookies;
