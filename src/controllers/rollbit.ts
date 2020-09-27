@@ -1,7 +1,7 @@
-import helpers from '../../helpers';
+import helpers from '../helpers';
 import steam from './steam';
-import { ISteamLogin } from '../../interfaces/steam';
-import { Constants } from '../../helpers/constant';
+import { ISteamLogin } from '../interfaces';
+import { Constants } from '../helpers/constant';
 
 async function login(steamLogin: ISteamLogin) {
   const browser = await helpers.launchBrowser();

@@ -1,6 +1,6 @@
 import puppeteer = require('puppeteer');
-import { ISteamLogin } from '../../interfaces/steam';
-import { Constants } from '../../helpers/constant';
+import { ISteamLogin } from '../interfaces';
+import { Constants } from '../helpers/constant';
 
 async function login(page: puppeteer.Page, steamLogin: ISteamLogin) {
   await page.setUserAgent(Constants.UserAgent);
