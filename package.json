@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build-ts": "tsc",
+    "tsc": "tsc",
     "watch-ts": "tsc -w",
-    "start": "tsc && pm2-runtime start ecosystem.config.js"
+    "start": "pm2-runtime start ecosystem.config.js"
   },
   "author": "suphero",
   "license": "ISC",
